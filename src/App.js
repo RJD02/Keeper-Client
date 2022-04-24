@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import { Header } from "./components/Header/Header";
+import styles from "./App.module.css";
+import Footer from "./components/Footer/Footer";
+import Notes from "./components/Notes/Notes";
 function App() {
+  const [refresh, setRefresh] = useState(false);
+  const refreshHandler = () => {
+    setRefresh((st) => !st);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles["app"]}>
+      <Header refresh={refreshHandler} />
+      <Footer />
+      <Notes refresh={refresh} />
     </div>
   );
 }

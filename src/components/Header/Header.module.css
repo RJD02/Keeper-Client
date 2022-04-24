@@ -1,0 +1,20 @@
+.heading {
+  background-color: #f5ba13;
+  margin: auto -1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+.heading i {
+  font-size: 1.3rem;
+  padding-right: 8rem;
+}
