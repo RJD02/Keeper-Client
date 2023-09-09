@@ -12,7 +12,7 @@ function App() {
     <div className={styles["app"]}>
       <Header refresh={refreshHandler} />
       <Footer />
-      <Notes refresh={refresh} />
+      <Notes refresh={refresh} refreshHandler={refreshHandler} />
     </div>
   );
 }
